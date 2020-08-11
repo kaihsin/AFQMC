@@ -1,6 +1,11 @@
 # AFQMC using cytnx
 This is a simple 1D fermionic hubbard model. 
 
+
+## cytnx library:
+[Cytnx](https://github.com/kaihsin/Cytnx)
+
+
 # To compile,
 
 1) install cytnx with following cmake arguments:
