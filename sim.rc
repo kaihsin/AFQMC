@@ -1,0 +1,11 @@
+ID = Test
+
+nX = 2
+
+BINNUM = 5
+BINSZ = 1000
+EQUIN = 40
+
+seed = 99
+TrotM = 200
+CRTM = 10
