@@ -136,7 +136,7 @@ int main(int argc, char* argv[]){
     pars.PrintVars();
     cout << "t  :" << t << endl;
     cout << "mu :" << mu << endl;
-    cout << "U  :" << t << endl;
+    cout << "U  :" << U << endl;
     cout << "Beta :" << beta << endl;
 
     //===================================================
@@ -150,6 +150,7 @@ int main(int argc, char* argv[]){
     }else{
         for(int i=0;i<nX;i++){
             K(i,(i + nX- 1) % nX) += -t;
+            K(i,(i + 1) % nX) += -t;
             K(i,i) += -mu;
         }
     }

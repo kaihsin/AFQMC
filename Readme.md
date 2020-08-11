@@ -1,21 +1,27 @@
 # AFQMC using cytnx
-This is a simple 1D fermionic hubbard model. 
+This is AFQMC simulation of a simple 1D fermionic hubbard model. 
 
 
 ## cytnx library:
 [Cytnx](https://github.com/kaihsin/Cytnx)
 
 
-# To compile,
+# To compile:
 
 1) install cytnx with following cmake arguments:
     
     * -DUSE_MKL=on 
+    * -DUSE_OMP=on
     * -DCMAKE_INSTALL_PREFIX=<custom path> (optional)
     
 
 2) specify the cytnx path in the first line of Makefile
 
+# To run:
+
+1) change the general mc simulation parameters in sim.rc
+
+2) pass the model parameter as the arguments (see run.sh)
 
 
 # Developer:
