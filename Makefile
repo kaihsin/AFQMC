@@ -1,12 +1,12 @@
-CYTNX_PATH := /home/kaywu/Cytnx_test
-CYTNX_LDFLAGS := -lmkl_intel_ilp64 -lmkl_intel_thread -lmkl_core -liomp5 -lpthread -ldl -lm 
+CYTNX_INC := $(shell python -c "exec(\"import cytnx\nprint(cytnx.__cpp_include__)\")")
+CYTNX_LDFLAGS := $(shell python -c "exec(\"import cytnx\nprint(cytnx.__cpp_linkflags__)\")")
+CYTNX_LIB := $(shell python -c "exec(\"import cytnx\nprint(cytnx.__cpp_lib__)\")")/libcytnx.a
 CC := g++
-CCFLAGS := -std=c++11 -I$(CYTNX_PATH)/include 
-LDFLAGS := -L$(CYTNX_PATH)/lib $(CYTNX_LDFLAGS)
+CCFLAGS := -std=c++11 -I$(CYTNX_INC)
 all: dqmc
 
 dqmc: dqmc.o Parser.o
-	$(CC) $^ $(CYTNX_PATH)/lib/libcytnx.a -o $@ $(LDFLAGS)
+	$(CC) $^ -o $@ $(CYTNX_LIB) $(CYTNX_LDFLAGS)
 
 
 dqmc.o: dqmc.cpp dqmc.hpp
