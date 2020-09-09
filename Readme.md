@@ -8,12 +8,9 @@ This is AFQMC simulation of a simple 1D fermionic hubbard model.
 
 # To compile:
 
-1) install cytnx with following cmake arguments:
+1) install cytnx using conda install:
     
-    * -DUSE_MKL=on 
-    * -DUSE_OMP=on
-    * -DCMAKE_INSTALL_PREFIX=<custom path> (optional)
-    
+   $conda install -c kaihsinwu cytnx 
 
 2) specify the cytnx path in the first line of Makefile
 
