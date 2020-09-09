@@ -12,7 +12,9 @@ This is AFQMC simulation of a simple 1D fermionic hubbard model.
     
    $conda install -c kaihsinwu cytnx 
 
-2) specify the cytnx path in the first line of Makefile
+2) compile the code:
+
+   $make 
 
 # To run:
 
